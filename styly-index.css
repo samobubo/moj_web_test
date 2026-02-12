@@ -1,0 +1,789 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@media (max-width: 768px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.6rem;
+  }
+}
+
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  position: relative;
+  background: transparent;
+}
+.video-background-head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    z-index: 1;
+}
+.video-background-head video{
+   position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%; 
+    min-height: 100%; 
+    transform: translate(-50%, -50%); 
+    filter: opacity(80); 
+}
+.hero-content{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+  text-align: center;
+}
+.main-title{
+  font-family: "UnifrakturCook", "Old English Text MT", serif;
+  font-size: 6rem;
+  color: #f7d794;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
+  line-height: 1;
+}
+.cta-button{
+  display: inline-block;
+  font-family: "UnifrakturCook", "Old English Text MT", serif;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  background-color: rgb(124, 124, 124);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover{
+  background-color: #081370;
+}
+.subheader-up,
+.subheader-middle,
+.subheader-bottom {
+  display: none !important;
+    position: static;
+    z-index: 20;
+  width: 100%;
+
+}
+
+
+.subheader-up {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;       
+  gap: 16px;                
+  padding: 10px 20px;        
+  width: 100%;
+  background-color: transparent;
+  top: 0;
+}
+
+
+.subheader-up-phonecontact,
+.subheader-up-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap; 
+}
+
+
+.subheader-up-phonecontact img,
+.subheader-up-email img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+
+.subheader-up-phonecontact p,
+.subheader-up-email p {
+  font-size: 15px;
+  line-height: 2;
+  margin: 0;
+  font-family: "UnifrakturCook", "Old English Text MT", serif;
+  color: white;
+
+}
+.subheader-middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;                    
+    padding: 10px 16px;         
+    width: 100%;
+    background-color: transparent;
+    top: 30px;
+    
+}
+.subheader-middle-rezervacia{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    height: 40px;
+    padding: 30px 15px;
+    background-color: rgba(151, 151, 151, 0);
+    border-style: solid ;
+    border-radius: 6px ;
+    margin: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease ;
+
+}
+.subheader-middle-rezervacia:hover{
+  background-color: #081370;
+}
+.subheader-middle-rezervacia a{
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-family: "UnifrakturCook", "Old English Text MT", serif;
+}
+
+.subheader-middle-logo-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    
+}
+.subheader-middle-logo img,
+.subheader-middle-oalogo img{
+  display: flex;
+  align-items: center;
+  max-width: 80px;
+  width:auto;
+  height: 40px;
+
+   
+}
+.subheader-middle-search{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border: 5px;
+    overflow: hidden;
+    width:75%;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.subheader-middle-search input{
+    border: none;
+    padding: 8px 10px;
+    font-size: 1rem;
+    outline: none;
+    flex-grow: 1;
+}
+.subheader-middle-search button {
+    border: black;
+    background-color: rgb(148, 146, 146);
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 90%;
+
+    
+}
+
+
+
+.subheader-bottom{
+     display: flex;
+     justify-content: center;
+     align-items: center;       
+     gap: 10px;                
+  padding: 0px 16px;         
+  width: 100%;
+  border: 1px solid black;
+  top: 110px;
+  
+  background-color:transparent;
+
+}
+
+
+.subheader-bottom-contact,
+.subheader-bottom-ubytovanie,
+.subheader-bottom-rastauracia,
+.subheader-bottom-eventy,
+.subheader-bottom-nastim,
+.subheader-bottom-jazdectvo{
+display: flex;
+align-items: center;
+height: 30px;
+font-size: 1.7rem;
+padding: 0px 15px;
+background-color:transparent;
+border-color: rgb(252, 252, 252);
+border-left-style: solid;
+border-right-style:solid;
+border-right-width: 1px;
+border-left-width:1px ;
+background-color: transparent;
+cursor: pointer;
+transition: background-color 0.3s ease;
+border-radius: 4px;
+font-weight: 300;
+}
+.subheader-bottom-contact:hover,
+.subheader-bottom-ubytovanie:hover,
+.subheader-bottom-rastauracia:hover,
+.subheader-bottom-eventy:hover,
+.subheader-bottom-nastim:hover,
+.subheader-bottom-jazdectvo:hover{
+  background-color: #081370;
+}
+
+.subheader-bottom-contact a,
+.subheader-bottom-ubytovanie a,
+.subheader-bottom-rastauracia a,
+.subheader-bottom-eventy a,
+.subheader-bottom-nastim a,
+.subheader-bottom-jazdectvo a{
+    text-decoration: none;
+    color: rgb(255, 253, 253);
+    font-family: "UnifrakturCook", "Old English Text MT", serif;
+    
+}
+
+.scrolled .subheader-up{
+  background-color: rgb(100, 100, 100);
+  transition: background-color 0.3s ease;
+}
+.scrolled .subheader-middle{
+  height: 50px;
+  background-color: rgb(146, 146, 146);
+  transition: background-color 0.3s ease;
+  transition: height 0.3s ease;
+}
+.scrolled .subheader-middle-rezervacia{
+  padding: 2px 10px;
+  height: 30px;
+  transition: height 0.2s ease;
+}
+.scrolled .subheader-bottom{
+  top: 80px;
+  transition: top 0.3s ease;
+  background-color: rgb(211, 211, 211);
+  transition: background-color 0.3s ease;
+  border: 1px solid #000000;
+}
+.video-background-head {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+main{
+  padding-top: 0px;
+}
+.main-ponuka{
+  width: 100%;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+}
+.main-ponuka h1{
+  font-family: "UnifrakturCook", "Old English Text MT", serif; ;
+  text-align: center;
+  font-size: 3rem;
+ margin: 35px;
+}
+.main-ponuka-middle{
+  display: flex;
+  justify-content: center;
+  height: 460px;
+  width: 100%;
+  flex-wrap: wrap;
+   
+}
+.main-ponuka-main-stravovanie,
+.main-ponuka-main-ubytovanie,
+.main-ponuka-main-eventy,
+.main-ponuka-main-jazdectvo{
+  height: auto;
+  width: 25%;
+  
+  
+}
+.main-ponuka-main-stravovanie,
+.main-ponuka-main-ubytovanie,
+.main-ponuka-main-eventy{
+  border-color: rgba(128, 128, 128, 0.43);
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.main-ponuka-main-stravovanie img,
+.main-ponuka-main-ubytovanie img,
+.main-ponuka-main-eventy img,
+.main-ponuka-main-jazdectvo img{
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  max-height: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 25%;
+  
+}
+.main-ponuka-main-stravovanie h5,
+.main-ponuka-main-ubytovanie h5,
+.main-ponuka-main-eventy h5,
+.main-ponuka-main-jazdectvo h5{
+  text-align: center;
+  font-family: "UnifrakturCook", "Old English Text MT", serif; ;
+  font-size: 2rem;
+}
+.main-ponuka-main-stravovanie p,
+.main-ponuka-main-ubytovanie p,
+.main-ponuka-main-eventy p,
+.main-ponuka-main-jazdectvo p{
+  justify-content: center;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+}
+.baliky{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  margin: 0;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+  background-color: rgb(244, 243, 243)
+}
+.baliky h2{
+  
+  font-family: "UnifrakturCook", "Old English Text MT", serif; ;
+  text-align: center;
+  font-size: 3rem;
+ margin: 35px;
+}
+
+.carousel-wrapper {
+  width: 100%; 
+  height: 700px; 
+  overflow: hidden; 
+  position: relative;
+  perspective: 1000px; 
+  margin-bottom: 30px;
+  
+  background-color: transparent;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.carousel-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; 
+  transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-item {
+  position: absolute; 
+  width: 30%; 
+  height: 550px; 
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 1; 
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0.5s;
+}
+
+.carousel-item h3 {
+  margin-top: 30px;
+  color: #333;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: fill;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.675);
+}
+.carousel-item-cena-link{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.carousel-text {
+  font-size: 0.9em;
+  color: #666;
+}
+.cena{
+  font-size: 1.3rem;
+  color: black ;
+  display: flex;
+}
+.carousel-item a{
+  display: flex;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+button {
+display: flex;
+  padding: 12px 25px;
+  margin: 0 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.button-button{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.main-zlavy{
+  width: 100%;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+}
+.main-fotky{
+  width: 100%;
+  height: 500px;
+  background-color: rgb(244, 243, 243);
+}
+.main-nav {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px; 
+    background-color: transparent; 
+    transition: all 0.3s ease;
+}
+
+
+.scrolled .main-nav {
+    background-color: rgba(176, 175, 175, 0.95); 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+    padding: 10px 40px; 
+}
+
+
+.nav-center-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-center-menu li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-family: 'Poppins', sans-serif; 
+}
+.nav-center-menu li a:hover {
+    color: #f7d794; 
+    border-bottom: 2px solid #f7d794;
+}
+
+
+.scrolled .nav-center-menu li a {
+    color: #333; 
+}
+.scrolled .nav-center-menu li a:hover {
+    color: #081370; 
+    border-bottom: 2px solid #081370;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search-icon {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white; 
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.scrolled .search-icon {
+    color: #333; 
+}
+
+
+.cta-button { 
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background-color: #081370; 
+    color: white;
+    border-radius: 8px; 
+    text-shadow: none;
+}
+.cta-button:hover{
+  background-color: #0d1a93;
+}
+
+
+.cta-button.nav-cta { 
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px; 
+}
+
+
+
+.nav-center-menu .has-dropdown {
+    position: relative;
+}
+
+
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    
+    background-color: #fff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    min-width: 180px;
+    padding: 10px 0;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 50; 
+}
+
+
+.has-dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; 
+    transform: translateX(-50%) translateY(5px); 
+}
+
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    display: block; 
+    padding: 8px 20px;
+    font-size: 1rem;
+    color: #333 !important; 
+    white-space: nowrap; 
+    border-bottom: none !important; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f7f7f7; 
+    color: #081370 !important;
+}
+
+
+.video-background-head video{
+    filter: opacity(80) brightness(0.8); 
+}
+
+.main-about{
+  min-height: 600px;
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+}
+.main-about-container{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 20px; 
+  height: 100%;
+}
+
+
+.main-about-text {
+    flex: 1; 
+    max-width: 55%; 
+}
+
+.main-about-photo {
+    flex: 1; 
+    max-width: 40%; 
+    margin-top: 20px;
+}
+
+
+.main-about-photo img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+}
+
+.main-about-text h2{
+  font-size: 3rem;
+  font-family: "UnifrakturCook", "Old English Text MT", serif;
+  margin: 20px;
+  text-align: center;
+}
+.main-about-text p{
+  font-size: 1.6rem;
+  text-align: justify;
+  margin-left: 10px;
+}
+.main-about-photo img {
+  width: auto;
+  display: block;
+}
+.main-kontakt{
+  background-color: #a29f9f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+  box-shadow: black 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
